@@ -9,6 +9,7 @@ import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
@@ -46,10 +47,13 @@ public class ParticleSystemApp extends Application {
             wind = new Vec2(e.getX() / 300.0 -1,0);
         });
 
+        Image img = new Image("file:star.png");
+        
         AnimationTimer timer = new AnimationTimer() {
             public void handle(long time) {
                 g.setFill(Color.WHITE);
                 g.fillRect(0,0, canvas.getWidth(),canvas.getHeight());
+                g.drawImage(img, 100,100);
                 for(ParticleSystem p : ps) {    
                     p.addParticle();
                     p.display(g);
