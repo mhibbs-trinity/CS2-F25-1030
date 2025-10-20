@@ -53,8 +53,9 @@ public class ParticleSystemApp extends Application {
             public void handle(long time) {
                 g.setFill(Color.WHITE);
                 g.fillRect(0,0, canvas.getWidth(),canvas.getHeight());
-                g.drawImage(img, 100,100);
+                //g.drawImage(img, 100,100);
                 for(ParticleSystem p : ps) {    
+                    //p.addParticle(img);
                     p.addParticle();
                     p.display(g);
                     p.update(canvas);
