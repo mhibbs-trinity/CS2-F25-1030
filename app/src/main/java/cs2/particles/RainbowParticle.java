@@ -3,7 +3,7 @@ package cs2.particles;
 import cs2.util.Vec2;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.paint.Color;
-
+/* 
 public class RainbowParticle extends RoundParticle {
     private double hue = 0;
 
@@ -21,3 +21,4 @@ public class RainbowParticle extends RoundParticle {
     }
 
 }
+*/

@@ -8,12 +8,12 @@ public class SquareParticle extends Particle {
     
     public SquareParticle(Vec2 sqPos) {
         super(sqPos);
-        col = Color.ORANGERED;
+        //col = Color.ORANGERED;
     }
 
     @Override
     public void display(GraphicsContext g) {
-        g.setFill(col);
+        g.setFill(cp.getColor());
         g.fillRect(pos.x, pos.y, size,size);
     }
 
