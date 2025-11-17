@@ -13,7 +13,7 @@ public class QueueTester {
     
     @BeforeEach
     public void init() {
-        s = new ArrayQueue<Integer>();
+        s = new LinkedQueue<Integer>();
     }
 
     @Test

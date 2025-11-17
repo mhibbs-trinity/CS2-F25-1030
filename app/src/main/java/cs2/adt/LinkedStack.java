@@ -1,5 +1,7 @@
 package cs2.adt;
 
+import java.util.EmptyStackException;
+
 public class LinkedStack<T> extends Stack<T> {
     private class Node {
         public T data; public Node next;
@@ -14,9 +16,17 @@ public class LinkedStack<T> extends Stack<T> {
         head = null;
     }
 
-    public void push(T elem);
-    public T pop();
+    public void push(T elem) {
+        head = new Node(elem, head);
+    }
+    public T pop() {
+        if(isEmpty()) throw new EmptyStackException();
+        T tmp = head.data;
+        head = head.next;
+        return tmp;
+    }
     public T peek() {
+        if(isEmpty()) throw new EmptyStackException();
         return head.data;
     }
     public boolean isEmpty() {

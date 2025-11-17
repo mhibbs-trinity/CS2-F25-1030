@@ -9,11 +9,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class StackTester {
-    ArrayStack<Integer> s;
+    Stack<Integer> s;
     
     @BeforeEach
     public void init() {
-        s = new ArrayStack<>();
+        s = new LinkedStack<>();
     }
 
     @Test

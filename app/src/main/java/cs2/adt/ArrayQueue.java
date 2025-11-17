@@ -1,6 +1,6 @@
 package cs2.adt;
 
-class QueueEmptyException extends Exception {}
+class QueueEmptyException extends RuntimeException {}
 
 public class ArrayQueue<T> extends Queue<T> {
     private int len;
